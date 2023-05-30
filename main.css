@@ -5,7 +5,6 @@ body {
 .container {
 	padding: 40px;
 	display: flex;
-	flex-wrap: wrap;
 	margin-top: 30px;
 }
 
@@ -38,6 +37,8 @@ hr {
 .rectangle2 .thirdLine,
 .rectangle2 .fourthLine {
 	height: calc(100% / 4);
+	display: flex;
+	align-items: center;
 }
 
 .rectangle1 {
@@ -270,9 +271,102 @@ hr {
 	font-size: 200%;
 }
 
+.rectangle2 .phrases {
+	margin-left: 2%;
+	align-items: center;
+	font-family: "Gill Sans", sans-serif;
+	color: #34282C;
+	font-size: 200%;
+	font-weight: bold;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
+.rectangle2 .secondLine .product,
+.rectangle2 .fourthLine .product{
+	align-items: center;
+	height: 30%;
+	background-color: lightgray;
+	display: flex;
+	justify-content: center;
+	margin-left: 2%;
+	border-radius: 5px;
+	font-family: "Gill Sans", sans-serif;
+	font-size: 130%;
+	padding: 20px;
+	width: 30%;
+	max-width: 400px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
+.rectangle2 .secondLine .amount,
+.rectangle2 .fourthLine .amount{
+	background-color: orange;
+	color: #F0F0F0;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 125%;
+	width: 40%;
+	text-align: center;
+	font-size: 100%;
+	max-width: 40px;
+}
+.rectangle2 .fourthLine .amount{
+	text-decoration: line-through;
+}
+.rectangle2 .fourthLine .product{
+	text-decoration: line-through;
+	width: 40%;
+}
+.badge {
+	position: fixed;
+	bottom: 0;
+	left: 20px;
+	width: 270px;
+	height: 40px;
+	background-color: purple;
+	color: white;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	line-height: 25px;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transition: transform 0.5s ease, background-color 0.5s ease;
+	border: 1px solid black;
+}
 
+.badge:hover {
+	transform: translateY(-50px);
+	background-color: orange;
+}
+
+.badge::after {
+	content: "";
+	position: absolute;
+	bottom: -50px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 15px;
+	color: black;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+
+}
+
+.badge:hover::after {
+	content: attr(data-author);
+	opacity: 1;
+}
+@media print {
+	.badge {
+		background-color: white;
+
+	}
+}
 
 
 
