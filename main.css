@@ -1,14 +1,19 @@
 body {
 	background-color: lightgray;
 }
-
+hr {
+	margin: 0;
+	height: 1px;
+	background-color: rgba(211, 211, 211, 1);
+	border: white;
+}
 .container {
 	padding: 40px;
 	display: flex;
 	margin-top: 30px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 800px) {
 	.container {
 		flex-direction: column;
 	}
@@ -18,13 +23,6 @@ body {
 		margin-bottom: 20px;
 		margin-right: 20px;
 	}
-}
-
-hr {
-	margin: 0;
-	height: 1px;
-	background-color: rgba(211, 211, 211, 1);
-	border: white;
 }
 .rectangle1 .secondLine,
 .rectangle1 .thirdLine,
@@ -56,13 +54,82 @@ hr {
 .rectangle2 {
 	height: 400px;
 	background-color: white;
-	flex-grow: 1;
+	flex-grow: 0.5; /* Змінено значення flex-grow на 0.5 */
 	margin-right: 20px;
 	margin-left: 20px;
 	border-radius: 10px;
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
+}
+button {
+	position: relative;
+	transform-style: preserve-3d;
+}
+button:after{
+	content: attr(data-tooltip) ;
+	padding: 5px;
+	bottom: 100%;
+	min-width:50px;
+	position: absolute;
+	white-space: nowrap;
+	transform: translate(-50%, 5px) translateZ(-1px);
+	border-radius: 5px;
+	left: 50%;
+	background: #AF01DA;
+	color: white;
+	transition: 0.5s;
+	visibility: hidden;
+
+}
+button:hover::after {
+	transform: translate(-50%, -5px) translateZ(0);
+	visibility: visible;
+	display: block;
+}
+.rectangle1 .firstLine button {
+	width: 20%;
+	max-width: 20%;
+	margin-right: 20px;
+	background-color: #2B60DE;
+	color: white;
+	border-color: #2B60DE;
+	border-radius: 0 5px 5px 0;
+	font-family: Lucida Grande, sans-serif;
+	font-weight: bold;
+	font-size: 100%;
+	box-shadow: inset 0px -5px 0px 0px #0041C2;
+
+}
+.rectangle1 .buttonb {
+	height: 60%;
+	width: 100%;
+	min-width: 100px;
+	flex-grow: 1;
+	background-color: #F0F0F0;
+	border-color: #F0F0F0;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: inset 0px -5px 0px 0px lightgray;
+	font-family: Lucida Grande, sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+	color: grey;
+
+}
+
+.rectangle1 .buttonx {
+	margin-left: 5px;
+	height: 60%;
+	width: 100%;
+	min-width: 70px;
+	color: white;
+	background-color: red;
+	border-color: red;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: inset 0px -5px 0px 0px darkred;
+	font-size: 100%;
 }
 
 .rectangle1 .firstLine {
@@ -71,7 +138,6 @@ hr {
 	align-items: center;
 	justify-content: center;
 }
-
 .rectangle1 .firstLine input[type="text"],
 .rectangle1 .firstLine button {
 	height: 40%;
@@ -99,22 +165,7 @@ hr {
 	color: silver;
 }
 
-.rectangle1 .firstLine button {
-	width: 20%;
-	max-width: 20%;
-	margin-right: 20px;
-	background-color: #2B60DE;
-	color: white;
-	border-color: #2B60DE;
-	border-radius: 0 5px 5px 0;
-	font-family: Lucida Grande, sans-serif;
-	font-weight: bold;
-	font-size: 100%;
-	box-shadow: inset 0px -5px 0px 0px #0041C2;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
+
 
 .rectangle1 .secondLine{
 	display: flex;
@@ -124,11 +175,37 @@ hr {
 	margin-right: 20px;
 }
 
-.rectangle1 .secondLine .product{
+.rectangle1 .secondLine input[type="text"] {
 	font-family: "Gill Sans", sans-serif;
-	font-size: 110%;
+	width: 20%;
+	font-size: 120%;
+	border: none;
+	background: transparent;
 	text-decoration: line-through;
+	padding: 0;
+	margin: 0;
+	outline: none;
 }
+.rectangle1 .thirdLine input[type="text"],
+.rectangle1 .fourthLine input[type="text"]{
+	font-family: "Gill Sans", sans-serif;
+	font-size: 120%;
+	border: none;
+	background: transparent;
+	width: 22%;
+	padding: 0;
+	margin: 0;
+	outline: none;
+}
+.rectangle1 .secondLine input[type="text"]:focus,
+.rectangle1 .thirdLine input[type="text"]:focus,
+.rectangle1 .fourthLine input[type="text"]:focus
+{
+	border: 2px solid skyblue;
+	outline: none;
+}
+
+
 .amount{
 	background-color: #F0F0F0 ;
 	border-radius: 5px;
@@ -155,8 +232,7 @@ hr {
 	font-size: 100%;
 	font-weight: bold;
 	color: grey;
-	overflow: hidden;
-	text-overflow: ellipsis;
+
 }
 
 .rectangle1 .thirdLine ,
@@ -166,14 +242,6 @@ hr {
 	align-items: center;
 	margin-left: 20px;
 	margin-right: 20px;
-}
-
-.rectangle1 .thirdLine .product,
-.fourthLine .product{
-	order: 1;
-	font-family: "Gill Sans", sans-serif;
-	font-size: 110%;
-	width: 9%;
 }
 
 .thirdLineMiddle,
@@ -186,13 +254,13 @@ hr {
 }
 .thirdLineMiddle .button-,
 .fourthLineMiddle .button-{
-	height: 50%;
-	width: 55%;
+	height: 45%;
+	width: 60%;
 	color: white;
 	background-color: red;
 	box-shadow: inset 0px -2px 0px 0px darkred;
 	font-family: Lucida Grande, sans-serif;
-	font-size: 200%;
+	font-size: 100%;
 	border-radius: 50px;
 	border-color: red;
 	border-width: 1px;
@@ -216,13 +284,13 @@ hr {
 }
 .thirdLineMiddle .button\+,
 .fourthLineMiddle .button\+{
-	height: 50%;
-	width: 55%;
+	height: 45%;
+	width: 60%;
 	color: white;
 	background-color: green;
 	box-shadow: inset 0px -2px 0px 0px darkgreen;
 	font-family: Lucida Grande, sans-serif;
-	font-size: 150%;
+	font-size: 100%;
 	border-radius: 50px;
 	border-color: green;
 	border-width: 1px;
@@ -238,38 +306,6 @@ hr {
 	height: 100%;
 }
 
-.rectangle1 .buttonb {
-	height: 60%;
-	width: 100%;
-	min-width: 100px;
-	flex-grow: 1;
-	background-color: #F0F0F0;
-	border-color: #F0F0F0;
-	border-width: 1px;
-	border-radius: 5px;
-	box-shadow: inset 0px -5px 0px 0px lightgray;
-	font-family: Lucida Grande, sans-serif;
-	font-size: 100%;
-	font-weight: bold;
-	color: grey;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.rectangle1 .buttonx {
-	margin-left: 5px;
-	height: 60%;
-	width: 100%;
-	min-width: 70px;
-	color: white;
-	background-color: red;
-	border-color: red;
-	border-width: 1px;
-	border-radius: 5px;
-	box-shadow: inset 0px -5px 0px 0px darkred;
-	font-size: 200%;
-}
 
 .rectangle2 .phrases {
 	margin-left: 2%;
@@ -301,7 +337,7 @@ hr {
 }
 
 .rectangle2 .secondLine .amount,
-.rectangle2 .fourthLine .amount{
+.rectangle2 .fourthLine .amount {
 	background-color: orange;
 	color: #F0F0F0;
 	border-radius: 50%;
@@ -354,7 +390,6 @@ hr {
 	color: black;
 	opacity: 0;
 	transition: opacity 0.3s ease;
-
 }
 
 .badge:hover::after {
@@ -364,7 +399,6 @@ hr {
 @media print {
 	.badge {
 		background-color: white;
-
 	}
 }
 
