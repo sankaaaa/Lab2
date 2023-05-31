@@ -9,42 +9,41 @@
 
 <body>
 <div class="container">
-
 	<div class="rectangle1">
         <section class="firstLine">
             <input type="text" name="addProduct" placeholder="Назва товару">
-            <button type="button" name="add">Додати</button>
+            <button type="button" data-tooltip="Додати">Додати</button>
         </section>
         <hr>
         <section class="secondLine">
-            <label class="product">Помідори</label>
+            <input type="text" value="Помідори">
             <label class="amount">2</label>
-            <button type="button" name="notBought">Не куплено</button>
+            <button type="button" data-tooltip="Не куплено">Не куплено</button>
         </section>
         <hr>
         <section class="thirdLine">
-            <label class="product">Печиво</label>
+            <input type="text" value="Печиво">
             <section class="thirdLineMiddle">
-                <button class="button-" name="minus">-</button>
+                <button class="button-" data-tooltip="мінус">-</button>
                 <label class="amount">2</label>
-                <button class="button+" name="plus">+</button>
+                <button class="button+" data-tooltip="плюс">+</button>
             </section>
             <section class="thirdLineEnd">
-            <button class="buttonb" name="bought">Куплено</button>
-            <button class="buttonx" name="cancel">×</button>
+            <button class="buttonb" data-tooltip="куплено">Куплено</button>
+            <button class="buttonx" data-tooltip="скасувати">×</button>
             </section>
         </section>
         <hr>
         <section class="fourthLine">
-            <label class="product">Сир</label>
+            <input type="text" value="Сир">
             <section class="fourthLineMiddle">
-                <button class="button-" name="minus">-</button>
+                <button class="button-" data-tooltip="мінус">-</button>
                 <label class="amount">1</label>
-                <button class="button+" name="plus">+</button>
+                <button class="button+" data-tooltip="плюс">+</button>
             </section>
             <section class="fourthLineEnd">
-                <button class="buttonb" name="bought">Куплено</button>
-                <button class="buttonx" name="cancel">×</button>
+                <button class="buttonb" data-tooltip="куплено">Куплено</button>
+                <button class="buttonx" data-tooltip="скасувати">×</button>
             </section>
         </section>
     </div>
@@ -75,6 +74,5 @@
     </div>
 </div>
 <div class="badge" data-author="Oleksandra Prokopchuk">Buy list</div>
-
 </body>
 </html>
