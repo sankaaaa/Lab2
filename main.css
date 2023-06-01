@@ -45,7 +45,7 @@ hr {
 	flex-grow: 1;
 	margin-left: 20px;
 	border-radius: 10px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -58,7 +58,7 @@ hr {
 	margin-right: 20px;
 	margin-left: 20px;
 	border-radius: 10px;
-	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 	display: flex;
 	flex-direction: column;
 }
@@ -98,7 +98,7 @@ button:hover::after {
 	font-family: Lucida Grande, sans-serif;
 	font-weight: bold;
 	font-size: 100%;
-	box-shadow: inset 0px -5px 0px 0px #0041C2;
+	box-shadow: inset 0 -5px 0 0 #0041C2;
 
 }
 .rectangle1 .buttonb {
@@ -110,7 +110,7 @@ button:hover::after {
 	border-color: #F0F0F0;
 	border-width: 1px;
 	border-radius: 5px;
-	box-shadow: inset 0px -5px 0px 0px lightgray;
+	box-shadow: inset 0 -5px 0 0 lightgray;
 	font-family: Lucida Grande, sans-serif;
 	font-size: 100%;
 	font-weight: bold;
@@ -128,7 +128,7 @@ button:hover::after {
 	border-color: red;
 	border-width: 1px;
 	border-radius: 5px;
-	box-shadow: inset 0px -5px 0px 0px darkred;
+	box-shadow: inset 0 -5px 0 0 darkred;
 	font-size: 100%;
 }
 
@@ -227,7 +227,7 @@ button:hover::after {
 	border-color: #F0F0F0;
 	border-width: 1px;
 	border-radius: 5px;
-	box-shadow: inset 0px -5px 0px 0px lightgray;
+	box-shadow: inset 0 -5px 0 0 lightgray;
 	font-family: Lucida Grande, sans-serif;
 	font-size: 100%;
 	font-weight: bold;
@@ -258,7 +258,7 @@ button:hover::after {
 	width: 60%;
 	color: white;
 	background-color: red;
-	box-shadow: inset 0px -2px 0px 0px darkred;
+	box-shadow: inset 0 -2px 0 0 darkred;
 	font-family: Lucida Grande, sans-serif;
 	font-size: 100%;
 	border-radius: 50px;
@@ -288,7 +288,7 @@ button:hover::after {
 	width: 60%;
 	color: white;
 	background-color: green;
-	box-shadow: inset 0px -2px 0px 0px darkgreen;
+	box-shadow: inset 0 -2px 0 0 darkgreen;
 	font-family: Lucida Grande, sans-serif;
 	font-size: 100%;
 	border-radius: 50px;
@@ -359,46 +359,46 @@ button:hover::after {
 }
 .badge {
 	position: fixed;
-	bottom: 0;
-	left: 20px;
-	width: 270px;
-	height: 40px;
-	background-color: purple;
-	color: white;
-	font-family: Arial, sans-serif;
-	font-size: 20px;
-	line-height: 25px;
+	bottom: -75px;
+	left: 10px;
+	width: 120px;
+	height: 100px;
+	border: 2px solid aquamarine;
+;
+	background-color: aquamarine;
+	color: black;
+	border-radius: 5px;
 	text-align: center;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
-	transition: transform 0.5s ease, background-color 0.5s ease;
-	border: 1px solid black;
+	transition: transform 0.3s, background-color 0.3s;
+	cursor: pointer;
 }
 
 .badge:hover {
-	transform: translateY(-50px);
+	transform: translateY(-120px);
 	background-color: orange;
+	color: #34282C;
 }
 
-.badge::after {
-	content: "";
-	position: absolute;
-	bottom: -50px;
-	left: 50%;
-	transform: translateX(-50%);
-	font-size: 15px;
-	color: black;
-	opacity: 0;
-	transition: opacity 0.3s ease;
+.badge-content {
+	padding: 5px;
+	transition: opacity 0.3s;
 }
 
-.badge:hover::after {
-	content: attr(data-author);
+.badge:hover .badge-content {
 	opacity: 1;
 }
+
 @media print {
 	.badge {
-		background-color: white;
+		height: 70px;
+		padding-top: 20px;
+		border-radius: 20px 20px 0 0;
+		border-color: black;
+		background-color: #FFFFFF;
+		color: #6C63FF;
+	}
+	.badge-content {
+		display: none;
 	}
 }
 
