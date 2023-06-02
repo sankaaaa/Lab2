@@ -458,9 +458,13 @@ button:hover::after {
 		border-color: black;
 		background-color: #FFFFFF;
 		color: #6C63FF;
+		bottom: 0;
 	}
-	.badge-content {
+	.badge-content{
 		display: none;
+	}
+	.badge-content-print{
+		transform: translateY(-20px);
 	}
 }
 
