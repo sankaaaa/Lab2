@@ -9,46 +9,60 @@
 
 <body>
 <div class="container">
-	<div class="rectangle1">
+    <div class="rectangle1">
         <section class="firstLine">
             <input type="text" name="addProduct" placeholder="Назва товару">
             <button type="button" data-tooltip="Додати">Додати</button>
         </section>
         <hr>
         <section class="secondLine">
-            <input type="text" value="Помідори">
-            <label class="amount">2</label>
-            <button type="button" data-tooltip="Не куплено">Не куплено</button>
+            <div class="left">
+                <input type="text" value="Помідори">
+            </div>
+            <div class="center">
+                <label class="amount">2</label>
+            </div>
+            <div class="right">
+                <button type="button" data-tooltip="Не куплено">Не куплено</button>
+            </div>
         </section>
         <hr>
+
         <section class="thirdLine">
-            <input type="text" value="Печиво">
-            <section class="thirdLineMiddle">
+            <div class="left">
+                <input type="text" value="Печиво">
+            </div>
+            <div class="center">
                 <button class="button-" data-tooltip="мінус">-</button>
                 <label class="amount">2</label>
                 <button class="button+" data-tooltip="плюс">+</button>
-            </section>
-            <section class="thirdLineEnd">
-            <button class="buttonb" data-tooltip="куплено">Куплено</button>
-            <button class="buttonx" data-tooltip="скасувати">×</button>
-            </section>
+            </div>
+            <div class="right">
+                <button class="buttonBought" data-tooltip="куплено">Куплено</button>
+                <button class="buttonCancel" data-tooltip="скасувати">×</button>
+            </div>
         </section>
         <hr>
+
+
         <section class="fourthLine">
-            <input type="text" value="Сир">
-            <section class="fourthLineMiddle">
+            <div class="left">
+                <input type="text" value="Сир">
+            </div>
+            <div class="center">
                 <button class="button-" data-tooltip="мінус">-</button>
                 <label class="amount">1</label>
                 <button class="button+" data-tooltip="плюс">+</button>
-            </section>
-            <section class="fourthLineEnd">
-                <button class="buttonb" data-tooltip="куплено">Куплено</button>
-                <button class="buttonx" data-tooltip="скасувати">×</button>
-            </section>
+            </div>
+            <div class="right">
+                <button class="buttonBought" data-tooltip="куплено">Куплено</button>
+                <button class="buttonCancel" data-tooltip="скасувати">×</button>
+            </div>
         </section>
     </div>
 
-	<div class="rectangle2">
+
+    <div class="rectangle2">
         <section class="firstLine">
             <label class="phrases">Залишилося</label>
         </section>
@@ -72,10 +86,10 @@
             </label>
         </section>
     </div>
-</div>
-<div class="badge">
-    <div class="badge-content">BuyList</div>
-    <div class="badge-content-print">Created by Oleksandra Prokopchuk</div>
+    <div class="badge">
+        <div class="badge-content">BuyList</div>
+        <div class="badge-content-print">Created by Oleksandra Prokopchuk</div>
+    </div>
 </div>
 </body>
 </html>
