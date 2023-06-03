@@ -133,7 +133,9 @@ body {
 	background-color: #F0F0F0 ;
 	border-radius: 5px;
 }
-
+.rectangle1 .secondLine button{
+	margin-left: 25%;
+}
 .rectangle1 .secondLine button,
 .rectangle1 .thirdLine .buttonBought,
 .rectangle1 .fourthLine .buttonBought{
@@ -439,22 +441,15 @@ button:hover::after {
 		font-size: 50% ;
 	}
 }
-@media (max-width: 600px) {
-	.rectangle1 .thirdLine .button-,
-	.rectangle1 .thirdLine .button\+,
-	.rectangle1 .fourthLine .button-,
-	.rectangle1 .fourthLine .button\+{
-		width: 2%;
 
-	}
-}
 @media (max-width: 600px) {
 	.rectangle1 .thirdLine .button-,
 	.rectangle1 .thirdLine .button\+,
 	.rectangle1 .fourthLine .button-,
 	.rectangle1 .fourthLine .button\+{
-		width: 17%;
+		width: 20%;
 		padding: 5%;
+		font-size: 90%;
 
 	}
 }
