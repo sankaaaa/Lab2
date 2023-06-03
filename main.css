@@ -1,18 +1,16 @@
 body {
 	background-color: lightgray;
 }
-
 .container {
 	display: flex;
 	margin-top: 30px;
 	margin-right: 30px;
 	margin-left: 30px;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.container {
 		flex-direction: column;
 	}
-
 	.rectangle1,
 	.rectangle2 {
 		flex-grow: 1;
@@ -82,7 +80,7 @@ body {
 		font-size: 70% ;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.rectangle1 .firstLine button{
 		font-size: 100% ;
 	}
@@ -154,60 +152,7 @@ body {
 	font-size: 90%;
 	font-weight: bold;
 }
-@media (max-width: 650px) {
-	.rectangle1 .secondLine button,
-	.rectangle1 .thirdLine .buttonBought,
-	.rectangle1 .thirdLine .buttonCancel,
-	.rectangle1 .thirdLine .button-,
-	.rectangle1 .thirdLine .button\+,
-	.rectangle1 .fourthLine .buttonBought,
-	.rectangle1 .fourthLine .buttonCancel,
-	.rectangle1 .fourthLine .button-,
-	.rectangle1 .fourthLine .button\+{
-		font-size: 70% ;
-	}
-}
-@media (max-width: 610px) {
-	.rectangle1 .secondLine button,
-	.rectangle1 .thirdLine .buttonBought,
-	.rectangle1 .thirdLine .buttonCancel,
-	.rectangle1 .thirdLine .button-,
-	.rectangle1 .thirdLine .button\+,
-	.rectangle1 .fourthLine .buttonBought,
-	.rectangle1 .fourthLine .buttonCancel,
-	.rectangle1 .fourthLine .button-,
-	.rectangle1 .fourthLine .button\+{
-		font-size: 50% ;
-	}
-}
-@media (max-width: 600px) {
-	.rectangle1 .thirdLine .button-,
-	.rectangle1 .thirdLine .button\+,
-	.rectangle1 .fourthLine .button-,
-	.rectangle1 .fourthLine .button\+{
-		width: 2%;
 
-	}
-}
-@media (max-width: 500px) {
-	.rectangle1 .thirdLine .button-,
-	.rectangle1 .thirdLine .button\+,
-	.rectangle1 .fourthLine .button-,
-	.rectangle1 .fourthLine .button\+{
-		padding-top: 1%;
-		padding-bottom:1%;
-
-	}
-}
-@media (max-width: 500px) {
-	.rectangle1 .secondLine button,
-	.rectangle1 .thirdLine .buttonBought,
-	.rectangle1 .thirdLine .buttonCancel,
-	.rectangle1 .fourthLine .buttonBought,
-	.rectangle1 .fourthLine .buttonCancel{
-		font-size: 90% ;
-	}
-}
 
 .rectangle1 .thirdLine .buttonCancel,
 .rectangle1 .fourthLine .buttonCancel{
@@ -300,7 +245,7 @@ body {
 		font-size: 0.8em;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.rectangle2 .firstLine .phrases,
 	.rectangle2 .thirdLine .phrases{
 		font-size: 1.5em;
@@ -383,7 +328,7 @@ body {
 		font-size: 0.4em;
 	}
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 	.rectangle2 .secondLine .product,
 	.rectangle2 .fourthLine .product{
 		font-size: 1.2em;
@@ -468,6 +413,60 @@ button:hover::after {
 	}
 }
 
+@media (max-width: 650px) {
+	.rectangle1 .secondLine button,
+	.rectangle1 .thirdLine .buttonBought,
+	.rectangle1 .thirdLine .buttonCancel,
+	.rectangle1 .thirdLine .button-,
+	.rectangle1 .thirdLine .button\+,
+	.rectangle1 .fourthLine .buttonBought,
+	.rectangle1 .fourthLine .buttonCancel,
+	.rectangle1 .fourthLine .button-,
+	.rectangle1 .fourthLine .button\+{
+		font-size: 70% ;
+	}
+}
+@media (max-width: 610px) {
+	.rectangle1 .secondLine button,
+	.rectangle1 .thirdLine .buttonBought,
+	.rectangle1 .thirdLine .buttonCancel,
+	.rectangle1 .thirdLine .button-,
+	.rectangle1 .thirdLine .button\+,
+	.rectangle1 .fourthLine .buttonBought,
+	.rectangle1 .fourthLine .buttonCancel,
+	.rectangle1 .fourthLine .button-,
+	.rectangle1 .fourthLine .button\+{
+		font-size: 50% ;
+	}
+}
+@media (max-width: 600px) {
+	.rectangle1 .thirdLine .button-,
+	.rectangle1 .thirdLine .button\+,
+	.rectangle1 .fourthLine .button-,
+	.rectangle1 .fourthLine .button\+{
+		width: 2%;
+
+	}
+}
+@media (max-width: 600px) {
+	.rectangle1 .thirdLine .button-,
+	.rectangle1 .thirdLine .button\+,
+	.rectangle1 .fourthLine .button-,
+	.rectangle1 .fourthLine .button\+{
+		width: 17%;
+		padding: 5%;
+
+	}
+}
+@media (max-width: 600px) {
+	.rectangle1 .secondLine button,
+	.rectangle1 .thirdLine .buttonBought,
+	.rectangle1 .thirdLine .buttonCancel,
+	.rectangle1 .fourthLine .buttonBought,
+	.rectangle1 .fourthLine .buttonCancel{
+		font-size: 90% ;
+	}
+}
 
 
 
