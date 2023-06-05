@@ -6,6 +6,7 @@ body {
 	margin-top: 30px;
 	margin-right: 30px;
 	margin-left: 30px;
+	min-width: 450px;
 }
 @media (max-width: 600px) {
 	.container {
@@ -134,7 +135,7 @@ body {
 	border-radius: 5px;
 }
 .rectangle1 .secondLine button{
-	margin-left: 25%;
+	margin-left: 22%;
 }
 .rectangle1 .secondLine button,
 .rectangle1 .thirdLine .buttonBought,
